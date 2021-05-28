@@ -14,15 +14,8 @@ const Header = () => {
         <header>
             {/* Top nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
-                <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
-                    <Image 
-                        src="https://links.papareact.com/f90"
-                        width={150}
-                        height={40}
-                        objectFit="contain"
-                        className="cursor-pointer"
-                        onClick={() => router.push('/')}
-                    />
+                <div onClick={() => router.push('/')} className="cursor-pointer pl-1 pr-2 flex items-center flex-grow sm:flex-grow-0">
+                    <h1 className="cursor-pointer text-white text-2xl text-center items-center justify-center">Amazon Clone</h1>
                 </div>
 
                 {/* Search */}
@@ -43,7 +36,7 @@ const Header = () => {
                     </div>
 
                     {/* returns & orders */}
-                    <div className="link">
+                    <div onClick={() => router.push('/orders')} className="link">
                         <p>Returns</p>
                         <p className="font-extrabold md:text-sm">& Orders</p>
                     </div>
